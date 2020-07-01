@@ -22,7 +22,23 @@ namespace MiernikWychylowy2
 		private int x1=150, x2=150, y1=40, y2=150;
 		
 		private Graphics g;
-		
+		private int[][] coords = new int[][]
+		{
+			new int[] {40,90},
+			new int[] {75,80},
+			new int[] {105,70},
+			new int[] {135,60},
+			new int[] {170,50},
+			new int[] {200,50},
+			new int[] {235,50},
+			new int[] {270,60},
+			new int[] {300,70},
+			new int[] {330,80},
+			new int[] {360,90}
+
+
+		}; 
+	
 		
 		private Color arrowCol;
 		public void startTimer()
@@ -43,13 +59,14 @@ namespace MiernikWychylowy2
 			BackgroundImageLayout = ImageLayout.Stretch;
 
 			InitializeComponent();
+			
 		}
 		protected override void OnPaint(PaintEventArgs e)
 		{
 			base.OnPaint(e);
 
 			g = e.Graphics;
-			var nodes = new[] { new Node { Code = 'A', Position = new Point(x2, y2) }, new Node { Code = 'B', Position = new Point(x1, y1) } };
+			 var nodes = new[] { new Node { Code = 'A', Position = new Point(x2, y2) }, new Node { Code = 'B', Position = new Point(x1, y1) } };
 
 			using (Pen Pencil = new Pen(Color.Green, 3))
 			{
@@ -74,10 +91,20 @@ namespace MiernikWychylowy2
 						g.DrawLine(Pencil, startPoint, endPoint);
 					}
 				}
+			
+				
 			}
 
 
 		}
+		public void SetCoordinates(int i)
+		{
+			this.x1 = coords[i+5][0];
+			this.y1 = coords[i+5][1];
+			Invalidate();
+			
+		}
+		
 		public Color TestCol
 		{
 			get
@@ -134,12 +161,17 @@ namespace MiernikWychylowy2
 		}
 		public int X1
 		{
-			set { x1 = value; }
+			set { x1 = value;
+				Invalidate();
+			}
 			get { return x1; }
+			
 		}
 		public int Y1
 		{
-			set { y1 = value; }
+			set { y1 = value;
+				Invalidate();
+			}
 			get { return y1; }
 		}
 		
