@@ -9,7 +9,9 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 using System.Windows.Forms;
+using System.Xml.Resolvers;
 
 namespace MiernikWychylowy2
 {
@@ -22,7 +24,8 @@ namespace MiernikWychylowy2
 		private int x1=150, x2=150, y1=40, y2=150;
 		private int scale = 5;
 		private int wwidth, wheight;
-		
+		private int xp = 6;
+		private int yp = 6;
 		private Graphics g;
 		private int[][] coords = new int[][]
 		{
@@ -39,7 +42,54 @@ namespace MiernikWychylowy2
 			new int[] {360,90}
 
 
-		}; 
+		};
+		public async void AnimateArrow(int k)
+		{
+
+			await Task.Run(() =>
+			{
+				if (xp < k)
+				{
+
+					for (int i = xp; i <= k; i++)
+					{
+						for (int j = 0; j < 14000; j++)
+						{
+							Invalidate();
+							Task.Delay(TimeSpan.FromMilliseconds(100));
+							Invalidate();
+						}
+						Task.Delay(TimeSpan.FromMilliseconds(100));
+						this.x1 = coords[i][0];
+						this.y1 = coords[i][1];
+						Invalidate();
+					}
+					Invalidate();
+				}
+				else
+				{
+					for (int i = xp; i >= k; i--)
+					{
+						for (int j = 0; j < 14000; j++)
+						{
+							Invalidate();
+							Task.Delay(TimeSpan.FromMilliseconds(100));
+							Invalidate();
+						}
+						Task.Delay(TimeSpan.FromMilliseconds(100));
+						this.x1 = coords[i][0];
+						this.y1 = coords[i][1];
+						Invalidate();
+					}
+					Invalidate();
+
+				}
+					this.xp = k;
+					this.yp = k;
+
+			});
+
+		}
 	public void UpdateCoords()
 		{
 			wheight = this.wyso;
@@ -63,7 +113,7 @@ namespace MiernikWychylowy2
 			this.coords[8][0] = (int)(0.75 * (double)wwidth);
 			this.coords[8][1] = (int)(0.35 * (double)wheight);
 			this.coords[9][0] = (int)(0.83 * (double)wwidth);
-			this.coords[9][1] = (int)(0.4 * (double)wheight);
+			this.coords[9][1] = (int)(0.42 * (double)wheight);
 			this.coords[10][0] = (int)(0.9 * (double)wwidth);
 			this.coords[10][1] = (int)(0.45 * (double)wheight);
 			
@@ -73,7 +123,7 @@ namespace MiernikWychylowy2
 		private Color arrowCol;
 		public void startTimer()
 		{
-
+			
 		}
 
 		public void setScale(int skala)
@@ -90,7 +140,7 @@ namespace MiernikWychylowy2
 
 		public Component2()
 		{
-			Width = 300;
+			Width = 400;
 			Height = 200;
 			BackgroundImage = Image.FromFile("C:\\Users\\Piotr\\source\\repos\\MiernikWychylowy2\\tarcza-01.png");
 			BackgroundImageLayout = ImageLayout.Stretch;
@@ -141,6 +191,7 @@ namespace MiernikWychylowy2
 			Invalidate();
 			
 		}
+		
 		
 		public Color TestCol
 		{
