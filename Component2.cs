@@ -20,6 +20,7 @@ namespace MiernikWychylowy2
 		private int szer;
 		private int wyso;
 		private int x1=150, x2=150, y1=40, y2=150;
+		private int scale;
 		
 		private Graphics g;
 		private int[][] coords = new int[][]
@@ -46,10 +47,17 @@ namespace MiernikWychylowy2
 
 		}
 
-
+		public void setScale(int skala)
+		{
+			this.scale = skala;
+		}
 		
 
-
+		public void ChangeBackground(string path)
+		{
+			this.BackgroundImage = Image.FromFile(path);
+			Invalidate();
+		}
 
 		public Component2()
 		{
@@ -99,8 +107,8 @@ namespace MiernikWychylowy2
 		}
 		public void SetCoordinates(int i)
 		{
-			this.x1 = coords[i+5][0];
-			this.y1 = coords[i+5][1];
+			this.x1 = coords[i+scale][0];
+			this.y1 = coords[i+scale][1];
 			Invalidate();
 			
 		}
