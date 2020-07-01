@@ -20,7 +20,8 @@ namespace MiernikWychylowy2
 		private int szer;
 		private int wyso;
 		private int x1=150, x2=150, y1=40, y2=150;
-		private int scale;
+		private int scale = 5;
+		private int wwidth, wheight;
 		
 		private Graphics g;
 		private int[][] coords = new int[][]
@@ -39,7 +40,35 @@ namespace MiernikWychylowy2
 
 
 		}; 
-	
+	public void UpdateCoords()
+		{
+			wheight = this.wyso;
+			wwidth = this.szer;
+			this.coords[0][0] =  (int) (0.1 * (double)wwidth);
+			this.coords[0][1] = (int)(0.45 * (double)wheight);
+			this.coords[1][0] = (int)(0.19 * (double)wwidth);
+			this.coords[1][1] = (int)(0.4 * (double)wheight);
+			this.coords[2][0] = (int)(0.26 * (double)wwidth);
+			this.coords[2][1] = (int)(0.35 * (double)wheight);
+			this.coords[3][0] = (int)(0.34 * (double)wwidth);
+			this.coords[3][1] = (int)(0.3 * (double)wheight);
+			this.coords[4][0] = (int)(0.43 * (double)wwidth);
+			this.coords[4][1] = (int)(0.25 * (double)wheight);
+			this.coords[5][0] = (int)(0.5 * (double)wwidth);
+			this.coords[5][1] = (int)(0.25 * (double)wheight);
+			this.coords[6][0] = (int)(0.59 * (double)wwidth);
+			this.coords[6][1] = (int)(0.25 * (double)wheight);
+			this.coords[7][0] = (int)(0.68 * (double)wwidth);
+			this.coords[7][1] = (int)(0.3 * (double)wheight);
+			this.coords[8][0] = (int)(0.75 * (double)wwidth);
+			this.coords[8][1] = (int)(0.35 * (double)wheight);
+			this.coords[9][0] = (int)(0.83 * (double)wwidth);
+			this.coords[9][1] = (int)(0.4 * (double)wheight);
+			this.coords[10][0] = (int)(0.9 * (double)wwidth);
+			this.coords[10][1] = (int)(0.45 * (double)wheight);
+			
+
+		}
 		
 		private Color arrowCol;
 		public void startTimer()
