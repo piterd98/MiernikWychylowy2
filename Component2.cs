@@ -64,7 +64,6 @@ namespace MiernikWychylowy2
 			Height = 200;
 			var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
 			var iconPath = Path.Combine(outPutDirectory, "tarcza-01.png");
-			MessageBox.Show(iconPath, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			string path = new Uri(iconPath).LocalPath;
 
 			BackgroundImage = Image.FromFile(path);
