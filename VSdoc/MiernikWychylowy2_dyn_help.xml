@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="MiernikWychylowy2" Title="SOLUTION-WIDE PROPERTIES Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.AnimateArrow" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000004.html" LinkGroup="MiernikWychylowy2">AnimateArrow Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000011.html" LinkGroup="MiernikWychylowy2">AppTest2 Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2.Properties" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000016.html" LinkGroup="MiernikWychylowy2">AppTest2.Properties Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.ArrowCol" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_000000000000000D.html" LinkGroup="MiernikWychylowy2">ArrowCol Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.BackCol" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_000000000000000A.html" LinkGroup="MiernikWychylowy2">BackCol Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.ChangeBackground" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000007.html" LinkGroup="MiernikWychylowy2">ChangeBackground Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000001.html" LinkGroup="MiernikWychylowy2">Component2 Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.Component2" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000002.html" LinkGroup="MiernikWychylowy2">Component2 Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2.Properties.Resources.Culture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000019.html" LinkGroup="MiernikWychylowy2">Culture Property</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2.Form1.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000015_overloads--.html" LinkGroup="MiernikWychylowy2">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000010_overloads--.html" LinkGroup="MiernikWychylowy2">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2.Form1" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000012.html" LinkGroup="MiernikWychylowy2">Form1 Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2.Form1.Form1" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000013.html" LinkGroup="MiernikWychylowy2">Form1 Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.IndexErrorHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000003.html" LinkGroup="MiernikWychylowy2">IndexErrorHandler Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000000.html" LinkGroup="MiernikWychylowy2">MiernikWychylowy2 Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.OnPaint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000008.html" LinkGroup="MiernikWychylowy2">OnPaint Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2.Properties.Resources.ResourceManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000018.html" LinkGroup="MiernikWychylowy2">ResourceManager Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2.Properties.Resources" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000017.html" LinkGroup="MiernikWychylowy2">Resources Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SOLUTION-WIDE PROPERTIES Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_000000000000001D.html" LinkGroup="MiernikWychylowy2">SOLUTION-WIDE PROPERTIES Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.SetCoordinates" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000009.html" LinkGroup="MiernikWychylowy2">SetCoordinates Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.Szer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_000000000000000B.html" LinkGroup="MiernikWychylowy2">Szer Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.UpdateCoords" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000005.html" LinkGroup="MiernikWychylowy2">UpdateCoords Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2.Form1.WrongValueException" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000014.html" LinkGroup="MiernikWychylowy2">WrongValueException Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.Wyso" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_000000000000000C.html" LinkGroup="MiernikWychylowy2">Wyso Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.X1" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_000000000000000E.html" LinkGroup="MiernikWychylowy2">X1 Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.Y1" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_000000000000000F.html" LinkGroup="MiernikWychylowy2">Y1 Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="MiernikWychylowy2.Component2.setScale" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_0000000000000006.html" LinkGroup="MiernikWychylowy2">setScale Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2.Properties.Resources.tarcza_01" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_000000000000001A.html" LinkGroup="MiernikWychylowy2">tarcza_01 Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2.Properties.Resources.tarcza_25A" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_000000000000001B.html" LinkGroup="MiernikWychylowy2">tarcza_25A Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="AppTest2.Properties.Resources.tarcza_25mA" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:MiernikWychylowy2.chm::/topic_000000000000001C.html" LinkGroup="MiernikWychylowy2">tarcza_25mA Property</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+

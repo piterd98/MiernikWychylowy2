@@ -12,12 +12,22 @@ using System.Threading.Tasks;
 using System.Web.UI;
 using System.Windows.Forms;
 using System.Xml.Resolvers;
+using NPOI.Util.Collections;
+using System.Runtime.Versioning;
+using System.IO;
+using System.Reflection;
 
+
+// Programowanie komponentowe
+// Temat: Miernik wychyłowy
+// Autorzy: Piotr Dajewski, Adam Wasik
+// Koszalin 2020
 namespace MiernikWychylowy2
 {
 	public partial class Component2 : Panel
 	{
-		//private const string V1 = "C:\\Users\\Piotr\\source\\repos\\MiernikWychylowy\\tarcza-01.png";
+		
+		// deklaracja zmiennych
 		private Color testCol;
 		private int szer;
 		private int wyso;
@@ -27,6 +37,9 @@ namespace MiernikWychylowy2
 		private int xp = 6;
 		private int yp = 6;
 		private Graphics g;
+		private Color arrowCol;
+
+		//Bazowe koordynaty dla rozdzielczosci komponentu 400x200
 		private int[][] coords = new int[][]
 		{
 			new int[] {40,90},
@@ -43,53 +56,92 @@ namespace MiernikWychylowy2
 
 
 		};
+		// Konstruktor
+		public Component2()
+		{
+			
+			Width = 400;
+			Height = 200;
+			InitializeComponent();
+
+		}
+
+		
+		public void IndexErrorHandler()
+		{
+			 MessageBox.Show("Wartośc wykracza poza dostępny zakres!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+		}
+		// Metoda animacji komponentu
 		public async void AnimateArrow(int k)
 		{
-
-			await Task.Run(() =>
+			try
 			{
-				if (xp < k)
+				await Task.Run(() =>
 				{
+					if (xp < k)
+					{
+						
+					//Pętla głowna animacji
 
 					for (int i = xp; i <= k; i++)
-					{
-						for (int j = 0; j < 14000; j++)
 						{
-							Invalidate();
+							
+							if(i > k)
+							{
+								IndexErrorHandler();
+							}
+						//Pętla tworząca odpowiednie opóźnienie
+						for (int j = 0; j < 12000; j++)
+							{
+								Invalidate();
+								Task.Delay(TimeSpan.FromMilliseconds(100));
+								Invalidate();
+							}
 							Task.Delay(TimeSpan.FromMilliseconds(100));
+							this.x1 = coords[i][0];
+							this.y1 = coords[i][1];
+							if(i >= 11)
+							{
+								i = 11;
+							}
+							else if (i <= -11)
+							{
+								i = -11;
+							}
 							Invalidate();
 						}
-						Task.Delay(TimeSpan.FromMilliseconds(100));
-						this.x1 = coords[i][0];
-						this.y1 = coords[i][1];
 						Invalidate();
 					}
-					Invalidate();
-				}
-				else
-				{
-					for (int i = xp; i >= k; i--)
+					else
 					{
-						for (int j = 0; j < 14000; j++)
+						for (int i = xp; i >= k; i--)
 						{
-							Invalidate();
+							for (int j = 0; j < 14000; j++)
+							{
+								Invalidate();
+								Task.Delay(TimeSpan.FromMilliseconds(100));
+								Invalidate();
+							}
 							Task.Delay(TimeSpan.FromMilliseconds(100));
+							this.x1 = coords[i][0];
+							this.y1 = coords[i][1];
 							Invalidate();
 						}
-						Task.Delay(TimeSpan.FromMilliseconds(100));
-						this.x1 = coords[i][0];
-						this.y1 = coords[i][1];
 						Invalidate();
-					}
-					Invalidate();
 
-				}
+					}
 					this.xp = k;
 					this.yp = k;
 
-			});
+				});
+			} catch(IndexOutOfRangeException ex)
+			{
+				IndexErrorHandler();
+				
+			}
 
 		}
+		// Przelicznik punktów pośrednich w zależności od ustawionego rozmiaru komponentu
 	public void UpdateCoords()
 		{
 			wheight = this.wyso;
@@ -119,35 +171,24 @@ namespace MiernikWychylowy2
 			
 
 		}
-		
-		private Color arrowCol;
-		public void startTimer()
-		{
-			
-		}
+	
 
 		public void setScale(int skala)
 		{
 			this.scale = skala;
 		}
 		
-
-		public void ChangeBackground(string path)
-		{
-			this.BackgroundImage = Image.FromFile(path);
+		// Metoda odpowiadająca za zmianę tła
+		public void ChangeBackground(Image image)
+		{	
+			
+			this.BackgroundImage = image;
+			BackgroundImageLayout = ImageLayout.Stretch;
+			
 			Invalidate();
 		}
-
-		public Component2()
-		{
-			Width = 400;
-			Height = 200;
-			BackgroundImage = Image.FromFile("C:\\Users\\Piotr\\source\\repos\\MiernikWychylowy2\\tarcza-01.png");
-			BackgroundImageLayout = ImageLayout.Stretch;
-
-			InitializeComponent();
-			
-		}
+		
+		// Mechanizm rysujący strzałkę
 		protected override void OnPaint(PaintEventArgs e)
 		{
 			base.OnPaint(e);
@@ -157,7 +198,6 @@ namespace MiernikWychylowy2
 
 			using (Pen Pencil = new Pen(Color.Green, 3))
 			{
-				//Pencil.Width = 5;
 				Pencil.StartCap = LineCap.NoAnchor;
 				Pencil.Color = arrowCol;
 
@@ -184,6 +224,7 @@ namespace MiernikWychylowy2
 
 
 		}
+		//Metoda do testowania pozycji strzałki
 		public void SetCoordinates(int i)
 		{
 			this.x1 = coords[i+scale][0];
@@ -192,8 +233,9 @@ namespace MiernikWychylowy2
 			
 		}
 		
+				// Metody opisujące właściwości
 		
-		public Color TestCol
+		public Color BackCol
 		{
 			get
 			{
